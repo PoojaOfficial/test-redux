@@ -1,6 +1,10 @@
-import red from './file1'
-import {combineReducers} from "redux";
+import counterReducer from './counterReducer';
+import {combineReducers} from 'redux';
 
-export default () => combineReducers({
-    file: red
+//Combine all the sub reducers
+const rootReducer = combineReducers({
+    myCounter: counterReducer,
+
 })
+
+export default rootReducer
